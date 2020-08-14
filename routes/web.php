@@ -28,3 +28,8 @@ Route::get('/post/{id}','PostController@show');
 Route::get('/post/{id}/edit','PostController@edit');
 Route::put('/post/{id}','PostController@update');
 Route::delete('/post/{id}','PostController@destroy');
+Auth::routes();
+
+// Route::resource('/post','PostController');
+
+Route::get('/home', 'HomeController@index')->name('home');

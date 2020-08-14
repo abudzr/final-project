@@ -8,6 +8,11 @@ use App\Post;
 
 class PostController extends Controller
 {
+
+    public function __construct(){
+
+        $this->middleware('auth')->except('index');
+    }
     public function create()
     {
         return view("create");
